@@ -32,6 +32,14 @@ class RoomService {
         }
       })
     }
+    roomServiceTransactionFeeByDatePerUser(date, id) {
+      return this.sampleData.reduce((acc, curr) => {
+        if (curr.date === date && curr.userID === id) {
+          acc += curr.totalCost;
+        }
+        return acc;
+      }, 0);
+    }
 }
 
 export default RoomService;

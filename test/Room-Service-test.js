@@ -37,5 +37,8 @@ describe('roomService', function() {
             date: '2019/09/17',
             food: 'Intelligent Rubber Sandwich',
             totalCost: 17.18 } ])
+    });
+    it.only('should return the total room service fees for the given user id, and given date', function() {
+        expect(roomService.roomServiceTransactionFeeByDatePerUser('2019/10/18', 55)).to.equal(7.95)
     })
 })
