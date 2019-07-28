@@ -1,6 +1,59 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: pink;
+$primary-background: rgba(33,33,33,1);
+$primary-text-color: white;
+$primary-page-height: 100vh;
 
+* {
+  margin: 0;
+  // padding: 10px;
+}
 body {
   background-color: $primary-background;
+}
+//*********************header and buttons**********************
+
+header {
+  align-items: flex-end;
+  display: flex;
+  height: 100px;
+  background-color: $primary-background;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  // margin-right: 25px;
+}
+
+.buttons {
+  border-bottom: none;
+  border: 10px rgba(0,190,190,1);
+  color: white;
+  height: 55px;
+  letter-spacing: 2px;
+  margin-right: 10px;
+  width: 150px;
+  border-radius: 5px 5px 0 0;
+  font-size: 20px;
+  background: $primary-background;
+}
+
+//*********************tabs and content**********************
+.main-content {
+  background-color: gainsboro;
+  height: $primary-page-height;
+}
+
+
+.rooms-content {
+  background-color: silver;
+  height: $primary-page-height;
+}
+
+.customers-content {
+  background-color: lightgrey;
+  height: $primary-page-height;
+}
+
+.orders-content {
+  background-color: darkgrey;
+  height: $primary-page-height;
 }
