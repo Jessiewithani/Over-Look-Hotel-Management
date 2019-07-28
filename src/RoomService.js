@@ -7,7 +7,7 @@ class RoomService {
         this.sampleData = sampleData;
     }
     calculateOrderFeesForSpecifiedDate(id, date) {
-        console.log(this.sampleData)
+        // console.log(this.sampleData)
         let findUserId = this.sampleData.filter(roomService => roomService.userID === id).find(user => {
           return user.date === date
         }).totalCost
@@ -24,6 +24,13 @@ class RoomService {
     }
     displayAllOrdersForSpecifiedDate(date) {
       return this.sampleData.filter(service => service.date === date);
+    }
+    showAllRoomServiceTransactionsForUser(id) {
+      return this.sampleData.filter(service => {
+        if (service.userID === id) {
+          return service;
+        }
+      })
     }
 }
 

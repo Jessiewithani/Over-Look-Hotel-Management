@@ -8,7 +8,7 @@ describe('roomService', function() {
     let roomService;
 
     beforeEach(function() {
-        roomService = new RoomService(sampleData.roomServices)
+        roomService = new RoomService(sampleData.roomServices, sampleData.bookings)
     });
 
     it('should be a function', function() {
@@ -27,5 +27,15 @@ describe('roomService', function() {
             food: 'Refined Plastic Sandwich',
             totalCost: 7.47 } 
         ])
+    })
+    it('should return a record of the users room service transactions', function() {
+        expect(roomService.showAllRoomServiceTransactionsForUser(70)).to.deep.equal([ { userID: 70,
+            date: '2019/10/09',
+            food: 'Sleek Rubber Sandwich',
+            totalCost: 13.13 },
+          { userID: 70,
+            date: '2019/09/17',
+            food: 'Intelligent Rubber Sandwich',
+            totalCost: 17.18 } ])
     })
 })
