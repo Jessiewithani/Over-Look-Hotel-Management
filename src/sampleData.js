@@ -103,6 +103,30 @@ let sampleData = {
       bedSize: 'king',
       numBeds: 1,
       costPerNight: 163.1 },
+    { number: 40,
+      roomType: 'single room', 
+      bidet: false,
+      bedSize: 'king',
+      numBeds: 1,
+      costPerNight: 346.42},
+    { number: 43,
+      roomType: 'junior suite',
+      bidet: false,
+      bedSize: 'king',
+      numBeds: 1,
+      costPerNight: 457.17},
+    { number: 25,
+      roomType:'junior suite',
+      bidet: true,
+      bedSize: 'queen',
+      numBeds: 1, 
+      costPerNight: 307.49},
+    { number: 17,
+      roomType: 'junior suite',
+      bidet: false,
+      bedSize: 'king',
+      numBeds: 2,
+      costPerNight: 393.97}
 		],
 	bookings: [
 		 { userID: 4, date: '2019/10/19', roomNumber: 5 },
@@ -127,7 +151,10 @@ let sampleData = {
      { userID: 86, date: '2019/10/29', roomNumber: 2 },
      { userID: 70, date: '2019/10/13', roomNumber: 43},
      { userID: 70, date: '2019/10/19', roomNumber: 25},
-     { userID: 70, date: '2019/10/06', roomNumber: 17}
+     { userID: 70, date: '2019/10/06', roomNumber: 17},
+     { userID: 47, date: '2019/10/10', roomNumber: 25 },
+     { userID: 26, date: '2019/10/10', roomNumber: 24 },
+     { userID: 61, date: '2019/10/10', roomNumber: 28 }
     ],
   roomServices: [
   	 { userID: 14,
@@ -199,9 +226,9 @@ let sampleData = {
        food: 'Sleek Rubber Sandwich',
        totalCost :13.13},
      { userID: 70,
-     date: '2019/09/17',
-     food:'Intelligent Rubber Sandwich',
-     totalCost :17.18}
+       date: '2019/09/17',
+       food:'Intelligent Rubber Sandwich',
+       totalCost :17.18}
     ]
  }
 
