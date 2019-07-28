@@ -2,13 +2,13 @@ const expect = chai.expect;
 import chai from 'chai';
 import sampleData from '../src/sampleData'
 
-import Booking from '../src/Booking'
+import Room from '../src/Rooms';
 
-describe('Booking', function() {
-    let booking;
+describe('Room', function() {
+    let room;
 
     beforeEach(function() {
-        booking = new Booking(sampleData)
+        room = new Room(sampleData)
     })
     it('should', function() {
 
