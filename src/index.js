@@ -33,36 +33,54 @@ import './css/base.scss';
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
 import './images/turing-logo.png'
-import Hotel from './Hotel';
+// import domUpdates from './DomUpdates'
+// import Hotel from './Hotel';
 
-console.log('This is the JavaScript entry file - your code begins here.');
+// console.log('This is the JavaScript entry file - your code begins here.');
+
+    $('.main-content-section').hide();
+    $('.rooms-content-section').hide();
+    $('.customers-content-section').hide();
+    $('.orders-content-section').hide();
 
 $('#main-tab').on('click', function() {
-    // $('#main-tab').css({ 'background': 'black', 'border': '5px rgba(0,190,190,1);', 'color': 'white', 'border-bottom': 'none'})
-    // $('.buttons').css({'background': 'black'})
-    $('.main-content').show();
-    $('.rooms-content').hide();
-    $('.customers-content').hide();
-    $('.orders-content').hide();
+    $('.main-content-section').show();
+    $('#main-tab').css( "background-color", "gainsboro" )
+    $('#main-tab').css( "color", "black" )
+    // $('.rooms-content').hide();
+    $('.rooms-content-section').hide();
+    $('.customers-content-section').hide();
+    $('.orders-content-section').hide();
+    $('.splash-page').hide();
 })
 
 $('#customer-tab').on('click', function() {
-    $('.customers-content').show();
-    $('.orders-content').hide();
-    $('.main-content').hide();
-    $('.rooms-content').hide();
+    $('.customers-content-section').show();
+    $('#customer-tab').css( "background-color", "lightgrey" )
+    $('#customer-tab').css( "color", "black" )
+    $('#main-tab').css("background-color", "rgba(33,33,33,1)")
+    $('#main-tab').css("color", "white")
+    $('.orders-content-section').hide();
+    $('.main-content-section').hide();
+    // $('.rooms-content').hide();
+    $('.rooms-content-section').hide();
+    $('.splash-page').hide();
 })
 
 $('#rooms-tab').on('click', function() {
-    $('.customers-content').hide();
-    $('.orders-content').hide();
-    $('.main-content').hide();
-    $('.rooms-content').show();
+    // $('.rooms-content').show();
+    $('.customers-content-section').hide();
+    $('.orders-content-section').hide();
+    $('.main-content-section').hide();
+    $('.rooms-content-section').show();
+    $('.splash-page').hide();
 })
 
 $('#orders-tab').on('click', function() {
-    $('.customers-content').hide();
-    $('.orders-content').show();
-    $('.main-content').hide();
-    $('.rooms-content').hide();
+    $('.customers-content-section').hide();
+    $('.orders-content-section').show();
+    $('.main-content-section').hide();
+    // $('.rooms-content').hide();
+    $('.rooms-content-section').hide();
+    $('.splash-page').hide();
 })

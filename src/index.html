@@ -10,37 +10,36 @@
       <button class= "buttons" id= "rooms-tab">ROOMS</button>
       <button class= "buttons" id= "orders-tab">ORDERS</button>
     </header>
-    <section class= "main-content-tab">
-      <h2 class= "main-content">main content here</h2>
+    <section class= "splash-page">
+      <h1>OVERLOOK</h1>
+      <!-- <h2 class = "instructions">Please Click A Tab To Begin</h2> -->
     </section>
-    <section class= "customers-content-tab">
-      <h2 class= "customers-content">customer content here</h2>
+    <section class= "main-content-section">
+      <article class= "total-rooms-available">
+        <h2 class= "display-total-rooms-available">Rooms that are available today:</h2>
+        <article class= "box-to-display-rooms-available"></article>
+      </article>
+      <article class= "total-revenue">
+          <h2 class= "display-total-revenue">Today's Total Revenue is:</h2>
+          <article class= "box-to-display-total-revenue"></article>
+      </article>
+      <article class= "percentage-of-rooms-occupied">
+          <h2 class= "display-percentage-of-rooms-occupied">Percentage of Rooms Occupied:</h2>
+          <article class= "box-to-display-percentage-of-rooms-occupied"></article>
+      </article>
+
+    </section>
+    <section class= "customers-content-section">
+      <label class= "search-customer">Search: </label>
+      <input class= "search-input" id= "search-customer-input" type= "text" placeholder= "Type a name"/>
+      <h2 class= "or">OR</h2>
+      <label class= "create-customer">Create: </label>
+      <input class= "customer-input" id="create-customer-input" type= "text" placeholder= "Create a name"/>
     </section>
     <section class= "rooms-content-section">
       <h2 class= "rooms-content">rooms content here</h2>
-      <table class="display-room-information-table">
-          <thead>
-              <tr>
-                  <th colspan="7">The table header</th>
-              </tr>
-          </thead>
-          <tr class="room-labels">
-            <td>ROOM #</td>
-            <td>ROOMTYPE</td>
-            <td>BIDET</td>
-            <td>BED SIZE</td>
-            <td># OF BEDS</td>
-            <td>COST</td>
-            <td>SELECTORS</td>
-          </tr>
-          <tbody class='append-booking-info'>
-          
-          </tbody>
-      </table>
-      
-      
     </section>
-    <section class= "orders-content-tab">
+    <section class= "orders-content-section">
       <h2 class= "orders-content">orders content here</h2>
     </section>
 
