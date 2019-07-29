@@ -1,4 +1,4 @@
-class Booking {
+class Bookings {
     constructor(sampleData) {
         this.sampleData = sampleData;
     }
@@ -47,7 +47,7 @@ class Booking {
       return this.sampleData.rooms.filter(room => room.roomType === type)
       console.log('room',room)
     }
-    
+
 }
 
-export default Booking;
+export default Bookings;

@@ -1,4 +1,4 @@
-class RoomService {
+class RoomServices {
     constructor(sampleData) {
         // this.userID = userID;
         // this.date = date;
@@ -49,4 +49,4 @@ class RoomService {
     }
 }
 
-export default RoomService;
+export default RoomServices;
