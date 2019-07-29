@@ -15,7 +15,7 @@ body {
 header {
   align-items: flex-end;
   display: flex;
-  height: 125px;
+  height: 135px;
   background-color: $primary-background;
   margin-bottom: 0;
   display: flex;
@@ -25,7 +25,7 @@ header {
 
 .buttons {
   border-bottom: none;
-  border: 10px rgba(0,190,190,1);
+  // border: 10px rgba(0,190,190,1);
   color: white;
   height: 55px;
   letter-spacing: 2px;
@@ -37,9 +37,85 @@ header {
 }
 
 //*********************tabs and content**********************
-.main-content {
-  background-color: gainsboro;
+.splash-page {
+  text-align:center;
+  display:flex;
+  justify-content: center;
+  align-items: center;
   height: $primary-page-height;
+}
+
+h1 {
+  font-size: 6em;
+  letter-spacing: 1em;
+  margin-left: 1em;
+  padding-bottom: 2em;
+}
+
+.main-content-section {
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: $primary-page-height;
+  text-align:center;
+  // padding-top: 25px;
+  color:gainsboro
+}
+
+.total-rooms-available, 
+.total-revenue,
+.percentage-of-rooms-occupied {
+  height: 500px;
+  width: 400px;
+  border: 4px solid black;
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 25px;
+
+}
+
+.box-to-display-rooms-available,
+.box-to-display-total-revenue,
+.box-to-display-percentage-of-rooms-occupied {
+  border: 2px solid black;
+  height: 435px;
+  width: 350px;
+  margin-left: 1.4em;
+  margin-top: 10px;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.total-revenue {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.customers-content-section {
+  background-color: lightgrey;
+  height: $primary-page-height;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  text-align:center;
+}
+
+.search-customer,
+.create-customer {
+  font-size: 2em;
+}
+
+.customer-input,
+.search-input {
+  height: 45px;
+  width: 400px;
+  font-size: 1.5em;
+  margin-top:5em;
+}
+
+.or {
+  font-size:2.5em;
+  margin-top: 2em;
 }
 
 .rooms-content-section {
@@ -47,19 +123,8 @@ header {
   height: $primary-page-height;
 }
 
-.display-room-information-table, td{
-  border: 1px solid black;
-  height: 200px;
-}
 
-
-
-.customers-content {
-  background-color: lightgrey;
-  height: $primary-page-height;
-}
-
-.orders-content {
+.orders-content-section {
   background-color: darkgrey;
   height: $primary-page-height;
 }
