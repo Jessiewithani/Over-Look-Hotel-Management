@@ -41,7 +41,7 @@ describe('roomService', function() {
     it('should return the total room service fees for the given user id, and given date', function() {
         expect(roomService.roomServiceTransactionFeeByDatePerUser('2019/10/18', 55)).to.equal(7.95)
     })
-    it.only('should add an item to the room service record', function() {
+    it('should add an item to the room service record', function() {
         expect(roomService.makeAnOrder(
             { userID: 70,
               date: '2019/09/17',

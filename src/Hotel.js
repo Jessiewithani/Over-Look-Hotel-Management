@@ -5,7 +5,7 @@
 
 
 
-class Hotel {
+class Hotels {
     constructor(users, rooms, bookings, roomService) {
         this.users = users;
         this.rooms = rooms;
@@ -14,4 +14,4 @@ class Hotel {
     }
 }
 
-export default Hotel;
+export default Hotels;
