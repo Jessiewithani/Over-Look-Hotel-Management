@@ -62,7 +62,7 @@ describe('Booking', function() {
               costPerNight: 393.97 } 
         ])
     })
-    it.only('should show the available dates for booking', function() {
+    it('should show the available dates for booking', function() {
         expect(booking.availableRooms('2019/09/08')).to.deep.equal([ 
             5,
             35,
