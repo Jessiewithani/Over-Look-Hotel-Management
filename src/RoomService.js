@@ -40,6 +40,13 @@ class RoomService {
         return acc;
       }, 0);
     }
+    makeAnOrder(order) {
+      let newOrder = this.sampleData.push(order)
+      console.log(this.sampleData.length)
+      //before pushing the order into the roomService array, the length of the array was 18
+      //when you push the new order into the array, it becomes 19
+      return newOrder;
+    }
 }
 
 export default RoomService;
