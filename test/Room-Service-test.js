@@ -8,7 +8,7 @@ describe('roomService', function() {
     let roomService;
 
     beforeEach(function() {
-        roomService = new RoomService(sampleData.roomServices, sampleData.bookings)
+        roomService = new RoomService(sampleData)
     });
 
     it('should be a function', function() {

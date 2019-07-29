@@ -1,16 +1,6 @@
-
-
-
-
-
-
-
 class Hotels {
-    constructor(users, rooms, bookings, roomService) {
-        this.users = users;
-        this.rooms = rooms;
-        this.bookings = bookings;
-        this.roomService = roomService;
+    constructor(sampleData) {
+        this.sampleData = sampleData;
     }
 }
 
