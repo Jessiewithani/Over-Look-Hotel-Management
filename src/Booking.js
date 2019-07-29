@@ -5,7 +5,7 @@ class Booking {
         // this.roomNumber = roomNumber;
         this.sampleData = sampleData;
     }
-    showAllBookings(id) {
+    showAllUserBookings(id) {
         return this.sampleData.bookings.filter(booking => {
           if (booking.userID === id) {
             return booking;
