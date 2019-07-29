@@ -92,4 +92,7 @@ describe('Booking', function() {
             28 
         ])
     })
+    it('should show percentage of unoccupied rooms', function() {
+        expect(booking.percentageOfRoomsUnAvailable('2019/08/16')).to.equal('3.85')
+    })
 })

@@ -47,6 +47,11 @@ class Bookings {
       return this.sampleData.rooms.filter(room => room.roomType === type)
       console.log('room',room)
     }
+    percentageOfRoomsUnAvailable(date) {
+        let percentageOfAvailableRooms = this.sampleData.bookings.filter(booking => booking.date === date);
+        return Number((percentageOfAvailableRooms.length / this.sampleData.bookings.length) * 100).toFixed(2)
+        
+    }
 
 }
 
