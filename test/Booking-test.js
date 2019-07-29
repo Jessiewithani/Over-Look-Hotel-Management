@@ -10,7 +10,7 @@ describe('Booking', function() {
         booking = new Booking(sampleData)
     })
     it('should show a list of ALL user bookings', function() {
-        expect(booking.showAllBookings(70)).to.deep.equal([ 
+        expect(booking.showAllUserBookings(70)).to.deep.equal([ 
             { userID: 70, date: '2019/10/13', roomNumber: 43 },
             { userID: 70, date: '2019/10/19', roomNumber: 25 },
             { userID: 70, date: '2019/10/06', roomNumber: 17 } 
