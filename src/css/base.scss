@@ -15,7 +15,7 @@ body {
 header {
   align-items: flex-end;
   display: flex;
-  height: 100px;
+  height: 125px;
   background-color: $primary-background;
   margin-bottom: 0;
   display: flex;
@@ -42,10 +42,17 @@ header {
   height: $primary-page-height;
 }
 
-.rooms-content {
+.rooms-content-section {
   background-color: silver;
   height: $primary-page-height;
 }
+
+.display-room-information-table, td{
+  border: 1px solid black;
+  height: 200px;
+}
+
+
 
 .customers-content {
   background-color: lightgrey;

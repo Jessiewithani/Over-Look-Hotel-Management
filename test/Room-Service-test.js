@@ -22,7 +22,7 @@ describe('roomService', function() {
     })
     it('should display all room service transactions according to the given date', function() {
         expect(roomService.displayAllOrdersForSpecifiedDate('2019/08/08')).to.deep.equal([ 
-            { userID: 87,
+          { userID: 87,
             date: '2019/08/08',
             food: 'Refined Plastic Sandwich',
             totalCost: 7.47 } 
@@ -38,7 +38,8 @@ describe('roomService', function() {
             food: 'Intelligent Rubber Sandwich',
             totalCost: 17.18 } ])
     });
-    it.only('should return the total room service fees for the given user id, and given date', function() {
+    it('should return the total room service fees for the given user id, and given date', function() {
         expect(roomService.roomServiceTransactionFeeByDatePerUser('2019/10/18', 55)).to.equal(7.95)
     })
+    
 })
