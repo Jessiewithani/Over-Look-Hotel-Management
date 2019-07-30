@@ -2,6 +2,7 @@
 $primary-background: rgba(33,33,33,1);
 $primary-text-color: white;
 $primary-page-height: 100vh;
+$primary-border-radius: 4px 4px 4px 4px;
 
 * {
   margin: 0;
@@ -20,7 +21,16 @@ header {
   margin-bottom: 0;
   display: flex;
   justify-content: flex-end;
-  // margin-right: 25px;
+  color:white;
+}
+
+.show-current-date {
+  font-size:1.8em;
+  color:lightgrey;
+  letter-spacing: 13px;
+  margin-bottom: 1em;
+  position: relative;
+  right: 18em;
 }
 
 .buttons {
@@ -57,10 +67,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-
   height: $primary-page-height;
   text-align:center;
-  // padding-top: 25px;
   color:gainsboro
 }
 
@@ -72,6 +80,7 @@ h1 {
   border: 4px solid black;
   background-color: rgba(0,0,0,0.5);
   padding-top: 25px;
+  border-radius: $primary-border-radius;
 
 }
 
@@ -84,6 +93,22 @@ h1 {
   margin-left: 1.4em;
   margin-top: 10px;
   background-color:rgba(0,0,0,0.5);
+  border-radius: $primary-border-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.append-info-total-rooms-available,
+.append-info-total-revenue {
+  font-size: 4em;
+}
+.append-percent-occupied {
+  font-size: 2em;
+}
+
+.percent {
+  font-size: 2em;
 }
 
 .total-revenue {
@@ -94,10 +119,18 @@ h1 {
 .customers-content-section {
   background-color: lightgrey;
   height: $primary-page-height;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  text-align:center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items:center;
+}
+
+.customer-search-container,
+.create-customer-container {
+  height:400px;
+  width:460px;
+  border: 2px solid black;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: $primary-border-radius;
 }
 
 .search-customer,
@@ -108,26 +141,26 @@ h1 {
 .customer-input,
 .search-input {
   height: 45px;
-  width: 400px;
+  width: 385px;
   font-size: 1.5em;
   margin-top:5em;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: $primary-border-radius;
   background-color: rgba(0,0,0,0.5);
   color: white;
   padding-left:10px;
   vertical-align: sub;
+  margin-left: 1.3em;
 }
 
-.customer-tab-button {
+.customer-tab-buttons {
   height: 51px;
-  width: 70px;
+  width: 16em;
   margin-left:-5px;
-  vertical-align:bottom
-}
-
-.or {
-  font-size:1.5em;
-  margin-top: 4.5em;
+  vertical-align:bottom;
+  margin-left: 1.2em;
+  margin-top: 0.5em;
+  font-size: 25px;
+  border-radius: $primary-border-radius;
 }
 
 .rooms-content-section {
@@ -138,5 +171,36 @@ h1 {
 
 .orders-content-section {
   background-color: darkgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   height: $primary-page-height;
+  text-align:center;
+  // padding-top: 25px;
+  color:gainsboro;
+  justify-content: space-evenly;
+}
+
+.room-service-total,
+.total-room-service-revenue,
+.all-room-service-transactions {
+  height: 500px;
+  width: 400px;
+  border: 4px solid black;
+  background-color: rgba(0,0,0,0.5);
+  padding-top: 25px;
+  border-radius: $primary-border-radius;
+}
+
+.box-to-display-room-service-total,
+.box-to-display-total-room-service-of-all-time,
+.box-to-display-all-transactions {
+  border: 2px solid black;
+  height: 435px;
+  width: 350px;
+  margin-left: 1.4em;
+  margin-top: 10px;
+  background-color:rgba(0,0,0,0.5);
+  border-radius: $primary-border-radius;
 }

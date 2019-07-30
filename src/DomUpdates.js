@@ -1,19 +1,21 @@
-// import $ from 'jquery';
+import $ from 'jquery';
 
-// import sampleData from '../src/sampleData';
+import sampleData from '../src/sampleData';
+import hotel from '../src/Hotel';
 
-// const domUpdates = {
+
+const domUpdates = {
+
+todaysDate() {
+    let today = new Date();
+    let day = String(today.getDate()).padStart(2, '0');
+    let month = String(today.getMonth() + 1).padStart(2, '0');
+    let year = today.getFullYear();
+    return `${year}/${month}/${day}`;
+}  
+
     
-//     addRowsForCustomersBookings(sampleData) {
-//         $('.append-booking-info').html('');
-//         sampleData.bookings.forEach(data => {
-//          $('.append-booking-info').append(
-//           `<tr>
-//            <td>${data.date}</td>
-//            <td>${data.roomNumber}</td>
-//           </tr>`)
-//         })
-//        },
-// }
+}
 
-// export default domUpdates;
+
+export default domUpdates;

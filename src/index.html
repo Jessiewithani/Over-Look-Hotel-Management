@@ -5,6 +5,7 @@
   </head>
   <body>
     <header>
+      <h1 class="show-current-date"></h1>
       <button class= "buttons" id= "main-tab">MAIN</button>
       <button class= "buttons" id= "customer-tab">CUSTOMER</button>
       <button class= "buttons" id= "rooms-tab">ROOMS</button>
@@ -17,35 +18,52 @@
     <section class= "main-content-section">
       <article class= "total-rooms-available">
         <h2 class= "display-total-rooms-available">Rooms that are available today:</h2>
-        <article class= "box-to-display-rooms-available"></article>
+        <article class= "box-to-display-rooms-available">
+          <h2 class= "append-info-total-rooms-available"></h2>
+        </article>
       </article>
       <article class= "total-revenue">
           <h2 class= "display-total-revenue">Today's Total Revenue is:</h2>
-          <article class= "box-to-display-total-revenue"></article>
+          <article class= "box-to-display-total-revenue">
+              <h2 class= "append-info-total-revenue"></h2>
+          </article>
       </article>
       <article class= "percentage-of-rooms-occupied">
           <h2 class= "display-percentage-of-rooms-occupied">Percentage of Rooms Occupied:</h2>
-          <article class= "box-to-display-percentage-of-rooms-occupied"></article>
+          <article class= "box-to-display-percentage-of-rooms-occupied">
+              <h2 class="percent"><span class="append-percent-occupied"></span>%</h2>
+          </article>
       </article>
     </section>
     <section class= "customers-content-section">
+      <!-- <h2 class= "append-user-on-screen">bityoskajfsldkjfal</h2> -->
       <div class= "customer-search-container">
       <label class= "search-customer">Search: </label>
       <input class= "search-input" id= "search-customer-input" type= "text" placeholder= "Type a name"/>
-      <button class = "customer-tab-button" id= "search-customer-button" type="submit">find</button>
+      <button class = "customer-tab-buttons" id= "search-customer-button" type="submit">find</button>
       </div>
-      <h2 class= "or">OR</h2>
       <div class= "create-customer-container">
       <label class= "create-customer">Create: </label>
       <input class= "customer-input" id="create-customer-input" type= "text" placeholder= "Create a name"/>
-      <button class = "customer-tab-button" id= "create-customer-button" type="submit">make</button>
+      <button class = "customer-tab-buttons" id= "create-customer-button" type="submit">make</button>
       </div>
     </section>
     <section class= "rooms-content-section">
       <h2 class= "rooms-content">rooms content here</h2>
     </section>
     <section class= "orders-content-section">
-      <h2 class= "orders-content">orders content here</h2>
+        <article class= "room-service-total">
+            <h2 class= "display-the-total">Total By Date:</h2>
+            <article class= "box-to-display-room-service-total"></article>
+          </article>
+          <article class= "total-room-service-revenue">
+              <h2 class= "display-total-revenue-of-all-time">Life Time Total:</h2>
+              <article class= "box-to-display-total-room-service-of-all-time"></article>
+          </article>
+          <article class= "all-room-service-transactions">
+              <h2 class= "display-all-transactions">Transaction Summary:</h2>
+              <article class= "box-to-display-all-transactions"></article>
+          </article>
     </section>
 
 
