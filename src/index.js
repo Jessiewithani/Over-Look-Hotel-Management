@@ -110,11 +110,13 @@ $('#main-tab').on('click', function() {
         $('.rooms-content-section').hide();
         $('.splash-page').hide();
     })
+$('#search-customer-button').on('click', function(e) {
+    e.preventDefault();
+    let searchUser = $('#search-customer-input').val();
+    customer.displayUserInfo(searchUser);
+    domUpdates.returnUserInfo(searchUser);
+})
 
-
-    setTimeout(function() {
-        // $('.append-info-total-rooms-available').html(hotel.availableRooms('2019/09/26'));
-    },500);
 
     
     

@@ -12,8 +12,10 @@ todaysDate() {
     let month = String(today.getMonth() + 1).padStart(2, '0');
     let year = today.getFullYear();
     return `${year}/${month}/${day}`;
-}  
-
+},
+returnUserInfo(searchUser) {
+    $('.append-user-on-screen').html(searchUser)
+}
     
 }
 

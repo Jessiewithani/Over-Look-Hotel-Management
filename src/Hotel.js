@@ -51,6 +51,14 @@ class Hotels {
       },0)
       return (roomServiceTabByDate + totalMoniesForRoom)
     }
+    createNewUser(firstName, lastName) {
+      this.sampleData.users.push({
+          id: 1 + this.sampleData.users.length++,
+          name: `${firstName} ${lastName}`,
+        })
+        return this.sampleData.users[this.sampleData.users.length - 1];
+      }
+    
 }
 
 export default Hotels;

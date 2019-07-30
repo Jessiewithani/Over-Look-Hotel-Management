@@ -45,5 +45,10 @@ describe('hotel', function() {
     });
     it.only('should show the total reveue for given date', function() {
         expect(hotel.totalRevenueForEverythang('2019/07/29')).to.equal(261.55)
+    });
+    it('should show the new user', function() {
+        expect(hotel.createNewUser('Spam', 'Man')).to.deep.equal(
+            { id: 12, name: 'Spam Man' }
+            )
     })
 })
