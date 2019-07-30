@@ -9,16 +9,6 @@ describe('Booking', function() {
     beforeEach(function() {
         booking = new Booking(sampleData)
     })
-    it('should show a list of ALL user bookings', function() {
-        expect(booking.showAllUserBookings(70)).to.deep.equal([ 
-            { userID: 70, date: '2019/10/13', roomNumber: 43 },
-            { userID: 70, date: '2019/10/19', roomNumber: 25 },
-            { userID: 70, date: '2019/10/06', roomNumber: 17 } 
-        ])
-    });
-    it('should show the total cost of bookings for user', function() {
-        expect(booking.calculateEntireBookingsCost(70)).to.equal(1158.63)
-    });
     it('should show the most popular booking date', function() {
         expect(booking.showPopularBookingDates()).to.equal('2019/10/10')
     });
@@ -60,36 +50,6 @@ describe('Booking', function() {
               bedSize: 'king',
               numBeds: 2,
               costPerNight: 393.97 } 
-        ])
-    })
-    it('should show the available dates for booking', function() {
-        expect(booking.availableRooms('2019/09/08')).to.deep.equal([ 
-            5,
-            35,
-            41,
-            13,
-            23,
-            26,
-            34,
-            37,
-            36,
-            12,
-            44,
-            34,
-            45,
-            19,
-            13,
-            18,
-            24,
-            9,
-            32,
-            2,
-            43,
-            25,
-            17,
-            25,
-            24,
-            28 
         ])
     })
     it('should show percentage of unoccupied rooms', function() {

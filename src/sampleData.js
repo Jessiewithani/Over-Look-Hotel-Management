@@ -154,7 +154,8 @@ let sampleData = {
      { userID: 70, date: '2019/10/06', roomNumber: 17},
      { userID: 47, date: '2019/10/10', roomNumber: 25 },
      { userID: 26, date: '2019/10/10', roomNumber: 24 },
-     { userID: 61, date: '2019/10/10', roomNumber: 28 }
+     { userID: 61, date: '2019/10/10', roomNumber: 28 },
+     { userID: 24, date: '2019/07/29', roomNumber: 5}
     ],
   roomServices: [
   	 { userID: 14,

@@ -37,6 +37,22 @@ class Customers {
         }).totalCost
         return findUserId;
     }
+    showAllUserBookings(id) {
+      return this.sampleData.bookings.filter(booking => {
+        if (booking.userID === id) {
+          return booking;
+        }
+      })
+  }
+  calculateEntireBookingsCost(id) {
+    let customerBookings = this.sampleData.bookings.filter(booking => booking.userID === id)
+    let final = customerBookings.map(booking => {
+      return this.sampleData.rooms.find(room => room.number === booking.roomNumber)
+    })
+      return final.reduce((acc, curr) => {
+        return acc += curr.costPerNight
+      },0)
+  }
 }
 
 export default Customers;

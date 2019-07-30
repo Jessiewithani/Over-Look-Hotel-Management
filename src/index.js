@@ -1,3 +1,23 @@
+import sampleData from '../src/sampleData';
+
+import $ from 'jquery';
+
+import Customer from '../src/Customers';
+import Hotel from '../src/Hotel';
+import Booking from '../src/Booking';
+import RoomService from '../src/RoomService';
+
+let customer;
+let hotel;
+let booking;
+let roomService;
+
+hotel = new Hotel(sampleData);
+customer = new Customer(sampleData);
+booking = new Booking(sampleData);
+roomService = new RoomService(sampleData);
+
+
 // This is the JavaScript entry file - your code begins here
 // Do not delete or rename this file ********
 // var customerData = fetch('https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users').then(response => {
@@ -29,7 +49,6 @@
 // var roomService = new RoomServices(allDataCombined);
 
 // An example of how you import jQuery into a JS file if you use jQuery in that file
-import $ from 'jquery';
 
 // An example of how you tell webpack to use a CSS (SCSS) file
 import './css/base.scss';
@@ -37,11 +56,7 @@ import './css/base.scss';
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
 import './images/turing-logo.png'
 
-// import domUpdates from './DomUpdates'
-// import Customers from '../src/Customers
-// import Hotel from '../src/Hotel'
-// import Booking from '../src/Booking';
-// import RoomService from '../src/RoomService';
+import domUpdates from '../src/DomUpdates';
 
 //// console.log('This is the JavaScript entry file - your code begins here.');
 $('.main-content-section').hide();
@@ -53,15 +68,22 @@ $(document).ready(() => {
 
 //*****************EVENT LISTENERS********************
 
-    $('#main-tab').on('click', function() {
-        $('.main-content-section').show();
-        $('#main-tab').css( "background-color", "gainsboro" )
-        $('#main-tab').css( "color", "black" )
-        // $('.rooms-content').hide();
+
+let currentDate = domUpdates.todaysDate();
+
+$('#main-tab').on('click', function() {
+    $('.main-content-section').show();
+    $('#main-tab').css( "background-color", "gainsboro" )
+    $('#main-tab').css( "color", "black" )
+    // $('.rooms-content').hide();
         $('.rooms-content-section').hide();
         $('.customers-content-section').hide();
         $('.orders-content-section').hide();
         $('.splash-page').hide();
+        $('.append-info-total-rooms-available').html(hotel.availableRooms(currentDate));
+        $('.append-percent-occupied').html(booking.percentageOfRoomsUnAvailable(currentDate));
+        $('.append-info-total-revenue').html(hotel.totalRevenueForEverythang(currentDate));
+        $('.show-current-date').html(hotel.displayCurrentDate()).show();
     })
     $('#customer-tab').on('click', function() {
         $('.customers-content-section').show();
@@ -89,8 +111,14 @@ $(document).ready(() => {
         $('.splash-page').hide();
     })
 
-    
 
+    setTimeout(function() {
+        // $('.append-info-total-rooms-available').html(hotel.availableRooms('2019/09/26'));
+    },500);
+
+    
+    
+    
 
 
 

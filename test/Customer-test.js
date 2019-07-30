@@ -28,7 +28,17 @@ describe('Customer', function() {
     it('should give the total dollar amount of entire duration of service fees', function() {
         expect(customer.calculateTotalRoomServiceFeesForEntireDuration(70)).to.equal(30.31)
     });
-    it.only('should give the total cost of service fees with provided date', function() {
+    it('should give the total cost of service fees with provided date', function() {
         expect(customer.calculateOrderFeesForSpecifiedDate(70,'2019/09/17')).to.equal(17.18)
+    });
+    it('should show a list of ALL user bookings', function() {
+        expect(customer.showAllUserBookings(70)).to.deep.equal([ 
+            { userID: 70, date: '2019/10/13', roomNumber: 43 },
+            { userID: 70, date: '2019/10/19', roomNumber: 25 },
+            { userID: 70, date: '2019/10/06', roomNumber: 17 } 
+        ])
+    });
+    it('should show the total cost of bookings for user', function() {
+        expect(customer.calculateEntireBookingsCost(70)).to.equal(1158.63)
     });
 })
