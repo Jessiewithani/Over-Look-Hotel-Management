@@ -53,6 +53,17 @@ class Customers {
         return acc += curr.costPerNight
       },0)
   }
+  showAllUserBookingsByName(name) {
+    let userName = this.sampleData.users.find(user => name === user.name)
+    let userBooking = this.sampleData.bookings.filter(booking => booking.userID === userName.id)
+    return userBooking.map(user => {
+      return {
+        name: userName.name,
+        date: user.date,
+        room: user.roomNumber
+      }
+    })
+  }
 }
 
 export default Customers;

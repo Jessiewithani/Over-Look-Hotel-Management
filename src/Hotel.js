@@ -12,6 +12,7 @@ class Hotels {
         })
         console.log('available options',availableOptions)
         //to show only the room number map through the array and access the room number.
+        //to show how many rooms are available, add the length method
         let roomNumber = availableOptions.map(booking => booking.roomNumber)
         return roomNumber.length
     }
@@ -51,6 +52,30 @@ class Hotels {
       },0)
       return (roomServiceTabByDate + totalMoniesForRoom)
     }
+    createNewUser(newGuestName) {
+      this.sampleData.users.push({
+          id: 1 + this.sampleData.users.length,
+          name: newGuestName,
+        })
+        return this.sampleData.users[this.sampleData.users.length - 1];
+    }
+    showAvailableRooms(date) {
+      let todaysBookings = this.sampleData.bookings.filter(booking => {
+        if(booking.date === date) {
+          return booking.roomNumber
+        }
+      }).map(room => room.roomNumber)
+  
+    return this.sampleData.rooms.reduce((acc, room) => {
+      todaysBookings.forEach(booking => {
+        if(room.number === booking) {
+          acc.push(room)
+        }
+      })
+      return acc
+    },[])
+    }
+    
 }
 
 export default Hotels;

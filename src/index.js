@@ -74,8 +74,7 @@ let currentDate = domUpdates.todaysDate();
 $('#main-tab').on('click', function() {
     $('.main-content-section').show();
     $('#main-tab').css( "background-color", "gainsboro" )
-    $('#main-tab').css( "color", "black" )
-    // $('.rooms-content').hide();
+    $('#main-tab').css( "color", "black" );
         $('.rooms-content-section').hide();
         $('.customers-content-section').hide();
         $('.orders-content-section').hide();
@@ -110,11 +109,27 @@ $('#main-tab').on('click', function() {
         $('.rooms-content-section').hide();
         $('.splash-page').hide();
     })
+$('#search-customer-button').on('click', function(e) {
+    e.preventDefault();
+    let searchUser = $('#search-customer-input').val();
+    customer.displayUserInfo(searchUser);
+    console.log('uh huh',domUpdates.returnUserInfo(searchUser));
+    let userBookings = customer.showAllUserBookingsByName(searchUser);
+    domUpdates.showUserBookings(userBookings);
+})
+$('#create-customer-button').on('click', function(e) {
+    e.preventDefault();
+    let newUser = $('#create-customer-input').val();
+    console.log('excuse me', hotel.createNewUser(newUser))
+})
+$('#find-rooms-button').on('click', function(e) {
+    e.preventDefault();
+    let searchDate = $('#search-booking-date').val();
+    let roomsAvailable = hotel.showAvailableRooms(searchDate);
+    domUpdates.showAvailableRoomsinBookings(roomsAvailable);
 
+})
 
-    setTimeout(function() {
-        // $('.append-info-total-rooms-available').html(hotel.availableRooms('2019/09/26'));
-    },500);
 
     
     

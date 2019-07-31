@@ -17,7 +17,7 @@
     </section>
     <section class= "main-content-section">
       <article class= "total-rooms-available">
-        <h2 class= "display-total-rooms-available">Rooms that are available today:</h2>
+        <h2 class= "display-total-rooms-available">Number of rooms that are available today:</h2>
         <article class= "box-to-display-rooms-available">
           <h2 class= "append-info-total-rooms-available"></h2>
         </article>
@@ -36,9 +36,9 @@
       </article>
     </section>
     <section class= "customers-content-section">
-      <!-- <h2 class= "append-user-on-screen">bityoskajfsldkjfal</h2> -->
       <div class= "customer-search-container">
-      <label class= "search-customer">Search: </label>
+        <label class= "search-customer">Search: </label>
+        <h2 class= "append-user-on-screen"></h2>
       <input class= "search-input" id= "search-customer-input" type= "text" placeholder= "Type a name"/>
       <button class = "customer-tab-buttons" id= "search-customer-button" type="submit">find</button>
       </div>
@@ -49,7 +49,20 @@
       </div>
     </section>
     <section class= "rooms-content-section">
-      <h2 class= "rooms-content">rooms content here</h2>
+        <article class= "available-dates-container">
+            <h2 class= "display-available-dates">Past bookings:</h2>
+            <article class= "box-to-display-available-dates">
+              <h2 class= "append-rooms-available-per-date"></h2>
+            </article>
+          </article>
+          <article class= "customer-booking-container">
+              <h2 class= "display-customer-booking-info">Rooms that are available today:</h2>
+              <input class= "search-date-for-rooms" id= "search-booking-date" type= "text" placeholder= "Type a date"/> 
+              <button class = "available-room-buttons" id= "find-rooms-button" type="submit">find</button>
+              <article class= "box-to-display-booking-info">
+                <h2 class= "append-info-for-booking-info"></h2>
+              </article>
+            </article>
     </section>
     <section class= "orders-content-section">
         <article class= "room-service-total">

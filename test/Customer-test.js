@@ -41,4 +41,7 @@ describe('Customer', function() {
     it('should show the total cost of bookings for user', function() {
         expect(customer.calculateEntireBookingsCost(70)).to.equal(1158.63)
     });
+    it('should show all bookings of user with given name', function() {
+        expect(customer.showAllUserBookingsByName('Brook Christiansen')).to.deep.equal([ { name: 'Brook Christiansen', date: '2019/10/19', room: 5 } ])
+    })
 })
