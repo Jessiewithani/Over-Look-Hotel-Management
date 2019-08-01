@@ -57,25 +57,36 @@
           </article>
           <article class= "customer-booking-container">
               <h2 class= "display-customer-booking-info">Rooms that are available today:</h2>
-              <input class= "search-date-for-rooms" id= "search-booking-date" type= "text" placeholder= "Type a date"/> 
+              <div class="search-room-input-container">
+              <input class= "search-date-for-rooms-input" id= "search-booking-date" type= "text" placeholder= "Type a date"/> 
               <button class = "available-room-buttons" id= "find-rooms-button" type="submit">find</button>
+              </div>
               <article class= "box-to-display-booking-info">
                 <h2 class= "append-info-for-booking-info"></h2>
+                <div class= "booking-message"></div>
               </article>
             </article>
     </section>
     <section class= "orders-content-section">
         <article class= "room-service-total">
             <h2 class= "display-the-total">Total By Date:</h2>
-            <article class= "box-to-display-room-service-total"></article>
+            <article class= "box-to-display-room-service-total">
+                <h2 class= "append-room-service-total"></h2>
+                <input class= "total-per-day" id="customer-orders-input" type= "text" placeholder= "Type a date"/>
+                <button class = "order-button" id= "search-total-transaction-button" type="submit">submit</button>
+            </article>
           </article>
           <article class= "total-room-service-revenue">
               <h2 class= "display-total-revenue-of-all-time">Life Time Total:</h2>
-              <article class= "box-to-display-total-room-service-of-all-time"></article>
+              <article class= "box-to-display-total-room-service-of-all-time">
+                  <h2 class= "append-entire-room-service-fee"></h2>
+              </article>
           </article>
           <article class= "all-room-service-transactions">
-              <h2 class= "display-all-transactions">Transaction Summary:</h2>
-              <article class= "box-to-display-all-transactions"></article>
+              <h2 class= "display-all-transactions">Record of Orders:</h2>
+              <article class= "box-to-display-all-transactions">
+                  <h2 class= "append-record-of-orders"></h2>
+              </article>
           </article>
     </section>
 

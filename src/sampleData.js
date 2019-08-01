@@ -155,9 +155,13 @@ let sampleData = {
      { userID: 47, date: '2019/10/10', roomNumber: 25 },
      { userID: 26, date: '2019/10/10', roomNumber: 24 },
      { userID: 61, date: '2019/10/10', roomNumber: 28 },
-     { userID: 24, date: '2019/07/29', roomNumber: 5}
+     { userID: 24, date: '2019/07/29', roomNumber: 5 },
+     { userID: 17, date: '2019/07/31', roomNumber: 45},
+     { userID: 39, date: '2019/07/31', roomNumber: 28},
+     { userID: 58, date: '2019/07/31', roomNumber: 20}
+
     ],
-  roomServices: [
+  roomService: [
   	 { userID: 14,
        date: '2019/07/29',
        food: 'Rustic Concrete Sandwich',
@@ -229,7 +233,19 @@ let sampleData = {
      { userID: 70,
        date: '2019/09/17',
        food:'Intelligent Rubber Sandwich',
-       totalCost :17.18}
+       totalCost :17.18},
+     { userID:69, 
+       date: '2019/07/31',
+       food:'Incredible Granite Sandwich',
+       totalCost:9.28},
+     { userID:39,
+       date: '2019/07/31',
+       food:'Handcrafted Steel Sandwich',
+       totalCost:10},
+     { userID:89, 
+       date: '2019/07/31',
+       food:'Gorgeous Steel Sandwich',
+       totalCost:18.44}
     ]
  }
 

@@ -23,6 +23,15 @@ class Bookings {
         return Number((percentageOfAvailableRooms.length / this.sampleData.bookings.length) * 100).toFixed(2)
         
     }
+    bookRoom(id, bookingDate, room) {
+      let booking = {
+        userID: id,
+        date: bookingDate,
+        roomNumber: room
+      }
+      this.sampleData.bookings.push(booking)
+     
+    }
 
 }
 

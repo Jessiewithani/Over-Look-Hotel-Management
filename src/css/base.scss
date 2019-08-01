@@ -200,17 +200,50 @@ h1 {
 
 .box-to-display-booking-info {
   border: 2px solid black;
-  height: 435px;
-  width: 850px;
+  height: 370px;
+  width: 815px;
   margin-left: 1.4em;
-  margin-top: 10px;
+  margin-top: -8px;
   background-color:rgba(0,0,0,0.5);
   border-radius: $primary-border-radius;
-  // display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-top: 30px;
+  padding-left: 35px;
+  text-align:center;
 }
 
+.display-customer-booking-info {
+  width: 328px;
+}
+
+.search-room-input-container {
+  display: flex;
+    justify-content: flex-end;
+    position: relative;
+    bottom: 28px;
+    margin-right:8em;
+}
+.search-date-for-rooms-input {
+  height: 45px;
+  width: 280px;
+  font-size: 1.5em;
+  // margin-top:5em;
+  border-radius: $primary-border-radius;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding-left:10px;
+  // vertical-align: sub;
+  // margin-left: 1.3em;
+}
+.available-room-buttons {
+  height: 51px;
+  width: 3em;
+  // margin-left:-5px;
+  // vertical-align:bottom;
+  margin-left: 0;
+  // margin-top: 0.5em;
+  font-size: 25px;
+  border-radius: $primary-border-radius;
+}
 .customer-booking-container {
   height: 500px;
   width: 900px;
@@ -220,13 +253,22 @@ h1 {
   border-radius: $primary-border-radius;
 }
 
+.booking-message {
+  color: lavender;
+  font-size: 2em;
+  margin-bottom: 2em;
+}
+
 th, td {
-  font-size: 12px;
+  font-size: 18px;
   padding: 5px;
+  color:lavender;
 }
 
 th {
-  font-size: 14px;
+  font-size: 20px;
+  color:lavender;
+  width:100px;
 }
 
 
@@ -264,3 +306,29 @@ th {
   background-color:rgba(0,0,0,0.5);
   border-radius: $primary-border-radius;
 }
+
+.total-per-day {
+  height: 45px;
+  width: 286px;
+  font-size: 1.5em;
+  margin-top:5em;
+  border-radius: $primary-border-radius;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding-left:10px;
+  vertical-align: sub;
+  margin-left: 0.1em;
+}
+
+.order-button {
+  height: 51px;
+  width: 12em;
+  margin-left:-5px;
+  vertical-align:bottom;
+  margin-left: 0.1em;
+  margin-top: 0.5em;
+  font-size: 25px;
+  border-radius: $primary-border-radius;
+}
+
+
