@@ -44,7 +44,7 @@ class Hotels {
         return acc;
       }, 0)
     
-      let roomServiceTabByDate = this.sampleData.roomServices.reduce((acc, service) => {
+      let roomServiceTabByDate = this.sampleData.roomService.reduce((acc, service) => {
         if(service.date === date) {
           acc += service.totalCost
         }

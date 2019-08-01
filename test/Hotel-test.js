@@ -24,7 +24,7 @@ describe('hotel', function() {
             { id: 12, name: 'Spam' }
             )
     });
-    it.only('should show room and the information that is available', function() {
+    it('should show room and the information that is available', function() {
         expect(hotel.showAvailableRooms('2019/10/10')).to.deep.equal([ { number: 25,
             roomType: 'junior suite',
             bidet: true,

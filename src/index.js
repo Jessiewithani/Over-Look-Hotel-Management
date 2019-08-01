@@ -109,13 +109,16 @@ $('#main-tab').on('click', function() {
         $('.rooms-content-section').hide();
         $('.splash-page').hide();
     })
+
+//*****************FUNCTIONS********************
+
 $('#search-customer-button').on('click', function(e) {
     e.preventDefault();
     let searchUser = $('#search-customer-input').val();
     customer.displayUserInfo(searchUser);
     console.log('uh huh',domUpdates.returnUserInfo(searchUser));
     let userBookings = customer.showAllUserBookingsByName(searchUser);
-    domUpdates.showUserBookings(userBookings);
+    domUpdates.showUserBookings(userBookings, searchUser);
 })
 $('#create-customer-button').on('click', function(e) {
     e.preventDefault();
@@ -127,6 +130,32 @@ $('#find-rooms-button').on('click', function(e) {
     let searchDate = $('#search-booking-date').val();
     let roomsAvailable = hotel.showAvailableRooms(searchDate);
     domUpdates.showAvailableRoomsinBookings(roomsAvailable);
+
+})
+
+$('#search-total-transaction-button').on('click', function(e) {
+    e.preventDefault();
+    let searchOrderByDate = $('#customer-orders-input').val()
+    let ordersByDate = roomService.displayAllOrdersForSpecifiedDate(searchOrderByDate);
+    domUpdates.showRoomServiceOrderByDate(ordersByDate);
+})
+
+$('.box-to-display-booking-info').on('click',function(e) {
+    e.preventDefault();
+    if($(e.target).hasClass('booking-button')) {
+        let searchUser = $('.display-available-dates').text()
+        let user = sampleData.users.find(user => user.name === searchUser)
+        let date = $('#search-booking-date').val();
+        let roomNumber = $(e.target).closest('button').attr('data-id')
+        booking.bookRoom(user.id, date, roomNumber)
+        console.log('date', date)
+        console.log('user', user)
+        let userBookings = customer.showAllUserBookingsByName(searchUser);
+        domUpdates.showUserBookings(userBookings, searchUser);
+        let targetCost = $(e.target).closest('button').attr('data-cat')
+        console.log('cost', targetCost)
+        domUpdates.appendBookingMessage(roomNumber, targetCost);
+    } 
 
 })
 
